@@ -1,0 +1,54 @@
+First, do 'npm init' to start setting up a node js app.This generates package.json file. It contains the scripts for the project,
+and also the dependencies for the project, like express.
+Now, express is a node.js web app framework. so next, install express using 'npm i express'
+Created backend folder and server.js in it. 
+import express in it and write code to listen on PORT 5000.
+To try running the code, 'node backend/server.js'. Now,instead of writing this code every time to run the code, we can save this as 
+a script in the package.json file
+Using app.get() method, we can create APIs. So, when we visit the path specified in the get function, it will implement the 
+callback function given as the second parameter.
+If we have a data js file,we can get the contents of it in the website. first we have to export it using module.exports = {chats};
+Then we have to import it in our server.js, and send it as res, in the api call.
+For using a variable in the path of get, use ':' followed by variable name. And we can access the real time value of it by using 
+req.params.<variable_name>
+For security reasons, better to not keep PORT number in code itself. So, create .env file and store PORT=5000 there. Also to make
+it accessible and working to other scripts, we need to install a library called "dotenv", import it in the script using require()
+and do dotenv.config();
+
+INstall package called nodemon to remove the hassle of restarting the server everytime a change has been made by installing 
+the package 'nodemon'
+
+Postman software helps to test APIs quickly and efficiently.
+
+Now, for the frontend part, do npx create-react-app <folder_name> to create the foundation for the react app.use npm start in the 
+frontend folder to start the frontend app.The project files will be kept in src folder. Public has the major html script, which in 
+turn has a div element with the id of root, which is being used by index.js file in the src folder. Index.js folder further renders the 
+App.js inside the root element. Now the main app.js file is where we are going to make the app basically.
+
+Remove unwanted default scripts and files. run the frontend using the same npm start command inside the frontend dir.
+
+the app runs automatically at port 3000 by default.
+
+Now the reason for getting all these react and stuff, is to make the website more easier to build and look more beautiful.We can do
+this by using component libraries like ChakraUI. So, install that, import it and follow its instructions to set up the provider.
+Then we can use its components by simply searching for it and pasting the code.
+
+There are other component libraries like bootstrap, Material UI, etc.
+
+Cross-Origin Requests: Since the frontend and backend are typically hosted on different ports (or domains), you may encounter 
+Cross-Origin Resource Sharing (CORS) issues. CORS is a security feature in browsers that restricts web pages from making requests 
+to a different domain by default. To allow your frontend to make requests to your backend, you need to configure CORS settings on the 
+server.
+
+Proxying Requests: During development, it's common to use tools like Webpack Dev Server or create-react-app's built-in development 
+server, which can proxy requests from the frontend to the backend. This allows you to avoid CORS issues during development.
+
+API Gateway: In more complex applications or microservices architectures, you may have an API gateway that routes requests to the 
+appropriate backend services, which can be on different servers or ports. The API gateway acts as a central entry point for your 
+application's APIs.
+
+So go to package.json of frontend, add "proxy":"http://127.0.0.1:5000"
+
+Also another useful thing about MERN stack is it helps to build single page application, which makes the app waayy too smoooooth. This is
+achieved using client side routing. So for this, we need to install react-router-dom.
+
