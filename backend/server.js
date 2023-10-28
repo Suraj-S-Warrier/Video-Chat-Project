@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const dotenv = require("dotenv");
-const { chats } = require("./data");
+const { chats } = require("./data/data");
 
 dotenv.config();
 
