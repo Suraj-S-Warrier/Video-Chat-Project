@@ -91,4 +91,17 @@ Whats the difference between {js function} and <js function/> ?
 You use {} for embedding dynamic data and expressions within JSX, while <ComponentName /> is used to create modular, reusable 
 components that can be used throughout your application.
 
+So, you encountered a problem while connecting to MongoDB. it was not getting connected and kept giving errors. The fix was to connect
+to mobile hotspot and switch DNS to google's.
 
+We had used endpoints using method like GET and the path..now we are using USE and the path. app.use helps us to specify middleware functions.
+We can have global middlewares too using app.use. While we use app.get for specific http protocols, app.use is for more general ones
+and for specifying and preprocessing before routing takes place.
+
+app.use(path,userRoutes)- All the routes and middleware in userRoutes will be after 'path/'.
+
+difference between module.exports = {ReisterUser} and module.exports = RegisterUser :
+The former exports the function as an object, with the function name as the property name..so while importing we need to destructure it too.
+The latter exports it as the function and we can use it directly without much hassle.
+
+JWT- JSON Web Token - basically for sharing info and stuff, especially during authorisation
