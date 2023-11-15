@@ -42,7 +42,7 @@ const accessChat = asyncHandler(async (req, res) => {
       throw new Error(error.message);
     }
   }
-});
+}); //to get a particular chat of the logged in user, with the user passed in params
 
 const fetchChats = asyncHandler(async (req, res) => {
   try {
@@ -62,7 +62,7 @@ const fetchChats = asyncHandler(async (req, res) => {
     res.status(400);
     throw new Error(error.message);
   }
-});
+});  //get all the chats of the currently logged in user
 
 const createGroupChat = asyncHandler(async (req, res) => {
   if (!req.body.users || !req.body.name) {
